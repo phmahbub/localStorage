@@ -9,6 +9,7 @@
 </head>
 <body class="container">
     <h1 class="text-center mt-5">Student Information</h1>
+    
     <div class="input-group mb-3 mt-5">
         <input type="text" id="first-name" class="form-control text-center" placeholder="First Name" >
         <button  class="btn btn-outline-secondary btn-info text-white px-5 me-2 " type="button" id="add-fname-button">Add First Name</button>
@@ -30,9 +31,13 @@
         <button class="btn btn-outline-secondary btn-info text-white px-5 w-25 m-2" type="button" id="delete-btn-all">Delete All</button>
     </div>
     <h3 class="text-center">Display Local Storage Information</h3>
+    <div class="input-group input-group-lg my-3">
+        <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
+        <input id="search-field" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
+      </div>
     <div class="text-center">
         <table class="table table-striped table-info table-hover">
-            <thead class="table-primary fs-4">
+            <thead class="table-primary fs-4" id="table">
               <tr>
                 <th scope="col">First Name</th>
                 <th scope="col">Last Name</th>

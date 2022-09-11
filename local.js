@@ -115,3 +115,23 @@ document.getElementById('remove-last-button').addEventListener('click', function
     localStorage.setItem('studentInfo', JSON.stringify(student))
       location.reload()
 })
+
+// search data in a table (its not working in this local storage ..... need some extra work to activate it )
+document.getElementById('inputGroup-sizing-lg').addEventListener('click', function(){
+    console.log('cat')
+    const searchFieldValue = document.getElementById('search-field').value.toUpperCase()
+    const table = document.getElementById('table')
+    const tr = table.getElementsByTagName('tr')
+    for(let i = 0; i < tr.length; i++){
+        let td = tr[i].getElementsByTagName('td')[0];
+        if(td){
+            let textValue = td.textContent || td.innerHTML;
+            if(textValue.toUpperCase().indexOf(searchFieldValue)>-1){
+                tr[i].style.display = '';
+            } else{
+                tr[i].style.display = 'none';
+            }
+        }
+    }
+
+})
