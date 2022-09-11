@@ -10,6 +10,7 @@
 <body class="container">
     <h1 class="text-center mt-5">Student Information</h1>
     
+
     <div class="input-group mb-3 mt-5">
         <input type="text" id="first-name" class="form-control text-center" placeholder="First Name" >
         <button  class="btn btn-outline-secondary btn-info text-white px-5 me-2 " type="button" id="add-fname-button">Add First Name</button>
@@ -21,7 +22,7 @@
         <button class="btn btn-outline-secondary btn-info text-white px-5 " type="button" id="remove-lname-button">Remove Last Name</button>
     </div>
     <div class="input-group mb-3 mt-2">
-        <input type="text" id="age" class="form-control text-center" placeholder="Last Name" >
+        <input type="text" id="age" class="form-control text-center" placeholder="Age" >
         <button class="btn btn-outline-secondary btn-info text-white px-5 me-2 " type="button" id="add-age-button">Add Age</button>
         <button class="btn btn-outline-secondary btn-info text-white px-5 " type="button" id="remove-age-button">Remove Age</button>
     </div>
@@ -30,13 +31,11 @@
         <button class="btn btn-outline-secondary btn-info text-white px-5 w-25 m-2" type="button" id="remove-last-button">Remove Element</button>
         <button class="btn btn-outline-secondary btn-info text-white px-5 w-25 m-2" type="button" id="delete-btn-all">Delete All</button>
     </div>
+
+    <!----------- display local storage data  ------------------>
     <h3 class="text-center">Display Local Storage Information</h3>
-    <div class="input-group input-group-lg my-3">
-        <span class="input-group-text" id="inputGroup-sizing-lg">Search</span>
-        <input id="search-field" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg">
-      </div>
     <div class="text-center">
-        <table class="table table-striped table-info table-hover">
+        <table class="table table-striped table-info table-hover mb-5">
             <thead class="table-primary fs-4" id="table">
               <tr>
                 <th scope="col">First Name</th>
@@ -48,6 +47,26 @@
         </table>
         
     </div>
+
+
+<!---------------- search from local storage data and show on DOM area  --------------------->
+    <h3 class="text-center mt-5">Display Local Storage search Data </h3>
+    <div class="input-group input-group-lg mb-3 mt-2">
+        <span class=" btn btn-info btn-outline-secondary input-group-text" id="search-button">Search</span>
+        <input id="search-field" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="search-button">
+        <span onclick="reload()" class=" btn btn-info btn-outline-secondary input-group-text" id="search-button">Reset</span>
+    </div>
+    <div class="text-center">
+        <table class="table table-striped table-info table-hover mb-5">
+            <thead class="table-primary fs-4" id="table2">
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Age</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider fs-5" id="tbody2"></tbody>
+        </table>
 
     <script src="local.js"></script>
 </body>
